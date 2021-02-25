@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .app-wrapper {
+    background-color: rgb(66, 68, 68);
+    width: 700px;
+    height: 600px;
+  }
+}
