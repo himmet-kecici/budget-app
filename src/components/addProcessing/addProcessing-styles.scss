@@ -6,7 +6,7 @@
   padding: 5px;
 
   .input-group {
-    width: 388px;
+    width: 386px;
     flex: 1;
     padding: 20px;
     border: 1px solid orange;
@@ -19,6 +19,7 @@
     [type="number"] {
       font-family: "Lucida Console", "Courier New", monospace;
       font-weight: bold;
+      letter-spacing: 1px;
       font-size: 15px;
       width: 100%;
       padding: 12px 20px;
@@ -31,14 +32,13 @@
     }
     input[type="submit"] {
       font-family: "Lucida Console", "Courier New", monospace;
-      background-color: #4caf50;
       font-weight: bold;
       border: none;
       color: #607d86;
-      padding: 15px 32px;
+      padding: 10px 26px;
       text-align: center;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 15px;
       margin: 4px 2px;
       cursor: pointer;
 
