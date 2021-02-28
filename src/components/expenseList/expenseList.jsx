@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { GlobalContext } from '../../context/globalState'
+import ExpenseP from '../expenseP/expenseP'
+
 
 const ExpenseList = () => {
+    const { expenseProcessings } = useContext(GlobalContext)
+    console.log(expenseProcessings)
     return (
         <div className='processings processings-expense'>
             <h2>history</h2>
             <ul className='processing-list'>
-                <li className='processing'>
-                    <div className='processing-values' style={{ color: '#c44b4f' }}>
-                        <span className='processing-text'>rent</span>
-                        <span className='processing-amount'>$69</span>
-                    </div>
-                    <div className='delete-btn'>X</div>
-                </li>
+                {expenseProcessings.map(expenseProcessing => (
+                    <ExpenseP expenseProcessing={expenseProcessing} key={expenseProcessing.id} />
+                ))}
             </ul>
         </div>
     )

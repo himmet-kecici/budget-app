@@ -20,46 +20,52 @@ html {
   .app-wrapper {
     background-color: #4c5355;
     width: 900px;
-    height: 700px;
+    height: 650px;
 
     .list-container {
       width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      padding-top: 20px;
+      padding-top: 10px;
 
       h2 {
         color: #cbcdcb;
         font-size: 20px;
         letter-spacing: 1px;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
         text-align: center;
       }
       .processing-list {
-        width: auto;
         height: 200px;
         overflow: hidden;
         overflow-y: auto;
 
         .processing {
           border: 1px solid orange;
-          width: 320px;
+          width: 380px;
           display: flex;
           font-size: 15px;
           justify-content: space-between;
-          padding: 10px;
+          padding: 8px;
           margin-bottom: 5px;
 
           .processing-values {
-            width: 250px;
+            width: 310px;
             display: flex;
             justify-content: space-between;
+            padding: 5px;
+
+            .processing-text {
+              width: 250px;
+              overflow: hidden;
+              overflow-x: auto;
+            }
           }
           .delete-btn {
-            font-size: 13px;
+            font-size: 20px;
             cursor: pointer;
-            color: #c44b4f;
+            color: orange;
             font-weight: bolder;
           }
         }

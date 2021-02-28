@@ -1,59 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { GlobalContext } from '../../context/globalState'
+import IncomeP from '../incomeP/incomeP'
 
 const IncomeList = () => {
+    const { incomeProcessings } = useContext(GlobalContext)
+    console.log(incomeProcessings)
     return (
         <div className='processings processings-income'>
+
             <h2>history</h2>
             <ul className='processing-list'>
-                <li className='processing'>
-                    <div className='processing-values' style={{ color: '#77dd77' }}>
-                        <span className='processing-text'>salary</span>
-                        <span className='processing-amount'>$19</span>
-                    </div>
-                    <div className='delete-btn'>X</div>
-                </li>
-                <li className='processing'>
-                    <div className='processing-values' style={{ color: '#77dd77' }}>
-                        <span className='processing-text'>salary</span>
-                        <span className='processing-amount'>$19</span>
-                    </div>
-                    <div className='delete-btn'>X</div>
-                </li>
-                <li className='processing'>
-                    <div className='processing-values' style={{ color: '#77dd77' }}>
-                        <span className='processing-text'>salary</span>
-                        <span className='processing-amount'>$19</span>
-                    </div>
-                    <div className='delete-btn'>X</div>
-                </li>
-                <li className='processing'>
-                    <div className='processing-values' style={{ color: '#77dd77' }}>
-                        <span className='processing-text'>salary</span>
-                        <span className='processing-amount'>$19</span>
-                    </div>
-                    <div className='delete-btn'>X</div>
-                </li>
-                <li className='processing'>
-                    <div className='processing-values' style={{ color: '#77dd77' }}>
-                        <span className='processing-text'>salary</span>
-                        <span className='processing-amount'>$19</span>
-                    </div>
-                    <div className='delete-btn'>X</div>
-                </li>
-                <li className='processing'>
-                    <div className='processing-values' style={{ color: '#77dd77' }}>
-                        <span className='processing-text'>salary</span>
-                        <span className='processing-amount'>$19</span>
-                    </div>
-                    <div className='delete-btn'>X</div>
-                </li>
-                <li className='processing'>
-                    <div className='processing-values' style={{ color: '#77dd77' }}>
-                        <span className='processing-text'>salary</span>
-                        <span className='processing-amount'>$19</span>
-                    </div>
-                    <div className='delete-btn'>X</div>
-                </li>
+                {incomeProcessings.map(incomeProcessing => (
+                    <IncomeP incomeProcessing={incomeProcessing} key={incomeProcessing.id} />
+                ))}
             </ul>
         </div>
     )
