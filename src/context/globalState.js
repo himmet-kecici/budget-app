@@ -17,12 +17,27 @@ const initialState = {
 export const GlobalContext = createContext(initialState)
 
 export const GlobalContextProvider = ({ children }) => {
-    const [state] = useReducer(AppReducer, initialState)
+    const [state, dispatch] = useReducer(AppReducer, initialState)
+
+    const addIncome = (incomeProcessing) => {
+        dispatch({
+            type: 'ADD_INCOME',
+            payload: incomeProcessing
+        })
+    }
+    const addExpense = (expenseProcessing) => {
+        dispatch({
+            type: 'ADD_EXPENSE',
+            payload: expenseProcessing
+        })
+    }
 
     return (
         <GlobalContext.Provider value={{
             incomeProcessings: state.incomeProcessings,
-            expenseProcessings: state.expenseProcessings
+            expenseProcessings: state.expenseProcessings,
+            addIncome,
+            addExpense
         }}>
             {children}
         </GlobalContext.Provider>
