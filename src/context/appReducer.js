@@ -1,4 +1,4 @@
-import deleteFunction from './utils'
+import { deleteExpense, deleteIncome } from './utils'
 
 const AppReducer = (state, action) => {
     switch (action.type) {
@@ -15,8 +15,9 @@ const AppReducer = (state, action) => {
         case "DELETE_PROCESSING":
             return {
                 ...state,
-                incomeProcessings: deleteFunction(state, action),
-                expenseProcessings: deleteFunction(state, action)
+                expenseProcessings: deleteExpense(state, action),
+                incomeProcessings: deleteIncome(state, action)
+
 
             }
         default:
