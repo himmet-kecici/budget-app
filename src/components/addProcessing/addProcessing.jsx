@@ -15,7 +15,8 @@ const AddProcessing = () => {
 
     const onChangeIncome = e => {
         setIncome({
-            ...income, [e.target.name]: e.target.value
+            ...income,
+            [e.target.name]: e.target.value
         })
     }
 
@@ -43,7 +44,8 @@ const AddProcessing = () => {
 
     const onChangeExpense = e => {
         setExpense({
-            ...expense, [e.target.name]: e.target.value
+            ...expense,
+            [e.target.name]: e.target.value
         })
     }
 
