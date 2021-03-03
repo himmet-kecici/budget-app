@@ -22,17 +22,21 @@ const AddProcessing = () => {
 
     const onSubmitIncome = e => {
         e.preventDefault()
-        const newIncomeProcess = {
-            id: uuidv4(),
-            incomeText,
-            incomeAmount: incomeAmount * 1
+
+        if (incomeText !== "") {
+            const newIncomeProcess = {
+                id: uuidv4(),
+                incomeText,
+                incomeAmount: incomeAmount * 1
+            }
+
+            addIncome(newIncomeProcess)
+            setIncome({
+                incomeText: '',
+                incomeAmount: []
+            })
         }
 
-        addIncome(newIncomeProcess)
-        setIncome({
-            incomeText: '',
-            incomeAmount: []
-        })
     }
 
     const [expense, setExpense] = useState({
@@ -51,17 +55,20 @@ const AddProcessing = () => {
 
     const onSubmitExpense = e => {
         e.preventDefault()
-        const newExpenseProcess = {
-            id: uuidv4(),
-            expenseText,
-            expenseAmount: expenseAmount * 1
+        if (expenseText !== "") {
+            const newExpenseProcess = {
+                id: uuidv4(),
+                expenseText,
+                expenseAmount: expenseAmount * 1
+            }
+
+            addExpense(newExpenseProcess)
+            setExpense({
+                expenseText: '',
+                expenseAmount: []
+            })
         }
 
-        addExpense(newExpenseProcess)
-        setExpense({
-            expenseText: '',
-            expenseAmount: []
-        })
     }
 
     return (
