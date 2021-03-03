@@ -8,7 +8,7 @@ const ExpenseList = () => {
     console.log(expenseProcessings)
     return (
         <div className='processings processings-expense'>
-            <h2>history</h2>
+            <h2 style={{ width: '380px' }}>history</h2>
             <ul className='processing-list'>
                 {expenseProcessings.map(expenseProcessing => (
                     <ExpenseP expenseProcessing={expenseProcessing} key={expenseProcessing.id} />

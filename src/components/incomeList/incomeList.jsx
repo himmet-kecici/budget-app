@@ -8,7 +8,7 @@ const IncomeList = () => {
     return (
         <div className='processings processings-income'>
 
-            <h2>history</h2>
+            <h2 style={{ width: '380px' }}>history</h2>
             <ul className='processing-list'>
                 {incomeProcessings.map(incomeProcessing => (
                     <IncomeP incomeProcessing={incomeProcessing} key={incomeProcessing.id} />

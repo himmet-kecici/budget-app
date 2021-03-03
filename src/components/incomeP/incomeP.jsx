@@ -6,6 +6,7 @@ const IncomeP = ({ incomeProcessing }) => {
     const { deleteProcessing } = useContext(GlobalContext)
 
     return (
+
         <li className='processing'>
             <div className='processing-values' style={{ color: '#77dd77' }}>
                 <span className='processing-text'>{incomeProcessing.incomeText}</span>
